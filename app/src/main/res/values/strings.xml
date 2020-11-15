@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AsyncTask</string>
+    <string name="Power">Запуск</string>
+    <string name="click">Click</string>
+    <string name="clicks_0">Clicks: 0</string>
+    <string name="status">Статус</string>
+</resources>

@@ -29,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
         for(int i=0;i<100;i++) {
             integers[i] = i + 1;
         }
-        indicatorBar = (ProgressBar) findViewById(R.id.indicator);
-        statusView = (TextView) findViewById(R.id.statusView);
-        progressBtn = (Button) findViewById(R.id.progressBtn);
+        indicatorBar = findViewById(R.id.indicator);
+        statusView = findViewById(R.id.statusView);
+        progressBtn =  findViewById(R.id.progressBtn);
         progressBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        clicksView = (TextView) findViewById(R.id.clicksView);
-        clicksBtn = (Button) findViewById(R.id.clicksBtn);
+        clicksView = findViewById(R.id.clicksView);
+        clicksBtn =  findViewById(R.id.clicksBtn);
         clicksBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onProgressUpdate(Integer... items) {
             indicatorBar.setProgress(items[0]+1);
-            statusView.setText("Статус: " + String.valueOf(items[0]+1));
+            statusView.setText("Статус: " + (items[0] + 1));
         }
         @Override
         protected void onPostExecute(Void unused) {
